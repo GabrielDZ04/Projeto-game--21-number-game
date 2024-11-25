@@ -1,0 +1,2 @@
+Regras: Insira números em sequência, de 1 a 4 números por vez.
+Limite de números: 40
