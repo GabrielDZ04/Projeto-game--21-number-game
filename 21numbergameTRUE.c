@@ -34,7 +34,7 @@ void exibir(char *nome_arq) {
     fread(jog.player_nome, sizeof(char), 100, temp);
     fread(&jog.pontos, sizeof(int), 1, temp);
     fread(jog.resultado, sizeof(char), 100, temp);
-    printf("%s, %d pontos,%s...\n", jog.player_nome, jog.pontos,jog.resultado);
+    printf("%s, %d pontos\n", jog.player_nome, jog.pontos);
     fclose(temp);
 }
 
