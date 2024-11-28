@@ -25,16 +25,15 @@ void colher(const char *nome, const char *modo, const player *p) {
 
 void exibir(char *nome_arq) {
     FILE *temp;
-    player jog;
+    player *jog = malloc(sizeof(player));
     temp = fopen(nome_arq, "rb");
     if (temp == NULL) {
         printf("Erro ao exibir arquivo.\n");
         return;
     }
-    fread(jog.player_nome, sizeof(char), 100, temp);
-    fread(&jog.pontos, sizeof(int), 1, temp);
-    fread(jog.resultado, sizeof(char), 100, temp);
-    printf("%s, %d pontos\n", jog.player_nome, jog.pontos);
+    fread(jog->player_nome, sizeof(char), 100, temp);
+    fread(&jog->pontos, sizeof(int), 1, temp);
+    printf("%s, %d pontos\n", jog->player_nome, jog->pontos);
     fclose(temp);
 }
 
